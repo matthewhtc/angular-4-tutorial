@@ -1,0 +1,9 @@
+<h2>{{ title }}</h2>
+<ul>
+    <li *ngFor="let course of courses">
+        {{ course }}
+    </li>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <input #course type="text" ngModel name="courseName"/><button type="submit">Add Course</button>
+    </form>
+</ul>
